@@ -3,6 +3,7 @@
     <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" width="120" alt="React Logo" />
   </a>
 </p>
+
 # DotGroup Frontend
 
 Frontend da plataforma DotGroup, desenvolvido com React + TypeScript + Vite.
