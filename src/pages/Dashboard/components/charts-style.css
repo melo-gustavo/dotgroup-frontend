@@ -1,0 +1,36 @@
+.dashboard-charts-container {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.dashboard-chart-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1.5rem;
+  min-height: 400px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-chart-card canvas {
+  max-height: 350px;
+}
+
+@media (max-width: 1024px) {
+  .dashboard-charts-container {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-chart-card {
+    min-height: 350px;
+  }
+}
+
+@media (max-width: 700px) {
+  .dashboard-chart-card {
+    padding: 1rem;
+    min-height: 300px;
+  }
+}

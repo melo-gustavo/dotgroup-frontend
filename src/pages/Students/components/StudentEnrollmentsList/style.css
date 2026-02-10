@@ -1,0 +1,127 @@
+.student-enrollments-container {
+  width: 100%;
+}
+
+.student-enrollments-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.student-enrollments-header {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr auto;
+  gap: 1rem;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border-bottom: 2px solid #333;
+  margin-bottom: 0.5rem;
+}
+
+.student-enrollment-header-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.student-enrollment-header-cell span {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  word-break: break-word;
+}
+
+.student-enrollment-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr auto;
+  gap: 1rem;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  border: 1px solid #e5e5e5;
+  border-radius: 0.5rem;
+  background-color: #fafafa;
+  transition: background-color 0.2s;
+}
+
+.student-enrollment-row:hover {
+  background-color: #f5f5f5;
+}
+
+.student-enrollment-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  min-height: 2rem;
+  justify-content: center;
+}
+
+.student-enrollment-cell span {
+  font-size: 0.875rem;
+  color: #333;
+  word-break: break-word;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.student-enrollment-cell.class-name span {
+  font-weight: 600;
+}
+
+.student-enrollment-cell.start-date span,
+.student-enrollment-cell.end-date span {
+  color: #666;
+}
+
+.student-enrollment-cell.action {
+  justify-self: end;
+}
+
+.student-enrollments-empty {
+  padding: 2rem 1rem;
+  text-align: center;
+  color: #999;
+  background-color: #fafafa;
+  border: 1px solid #e5e5e5;
+  border-radius: 0.5rem;
+}
+
+.student-enrollments-empty p {
+  margin: 0;
+}
+
+.student-enrollments-loading {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .student-enrollments-header {
+    display: none;
+  }
+
+  .student-enrollment-row {
+    grid-template-columns: 1fr auto;
+    gap: 0.75rem;
+  }
+
+  .student-enrollment-cell.start-date,
+  .student-enrollment-cell.end-date {
+    display: none;
+  }
+
+  .student-enrollment-cell.class-name {
+    grid-column: 1;
+  }
+
+  .student-enrollment-cell.action {
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: end;
+  }
+}

@@ -1,0 +1,28 @@
+.student-form {
+  display: grid;
+  gap: 1rem;
+}
+
+.form-group {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.student-form label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--text-700);
+  margin-bottom: 0.35rem;
+  display: block;
+}
+
+.student-form input {
+  width: 100%;
+}
+
+.form-error {
+  font-size: 0.8rem;
+  color: #b42318;
+  font-weight: 500;
+  display: block;
+}

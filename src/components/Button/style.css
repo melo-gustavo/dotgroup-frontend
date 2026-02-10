@@ -1,0 +1,80 @@
+.app-button {
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.app-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Variants */
+.app-button--primary {
+  background-color: var(--green-600);
+  color: var(--white);
+}
+
+.app-button--primary:hover:not(:disabled) {
+  background-color: var(--green-700);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(18, 96, 63, 0.3);
+}
+
+.app-button--secondary {
+  background-color: var(--border);
+  color: var(--text-900);
+  border: 2px solid transparent;
+}
+
+.app-button--secondary:hover:not(:disabled) {
+  background-color: var(--text-200);
+  transform: translateY(-2px);
+  border: 2px solid #000;
+}
+
+.app-button--danger {
+  background-color: #b42318;
+  color: var(--white);
+}
+
+.app-button--danger:hover:not(:disabled) {
+  background-color: #a01d14;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(180, 35, 24, 0.3);
+}
+
+.app-button--success {
+  background-color: var(--green-600);
+  color: var(--white);
+}
+
+.app-button--success:hover:not(:disabled) {
+  background-color: var(--green-700);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(18, 96, 63, 0.3);
+}
+
+/* Sizes */
+.app-button--small {
+  padding: 0.5rem 1rem;
+  font-size: 0.85rem;
+}
+
+.app-button--medium {
+  padding: 0.75rem 1.5rem;
+  font-size: 0.95rem;
+}
+
+.app-button--large {
+  padding: 1rem 2rem;
+  font-size: 1rem;
+}

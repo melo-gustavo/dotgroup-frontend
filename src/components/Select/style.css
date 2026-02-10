@@ -1,0 +1,83 @@
+.app-select-root {
+  display: grid;
+  gap: 0.35rem;
+  position: relative;
+}
+
+.app-select-root label {
+  font-size: 0.9rem;
+  color: var(--text-700);
+  font-weight: 600;
+}
+
+.app-select-trigger {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.65rem 0.75rem;
+  font-size: 0.95rem;
+  color: var(--text-900);
+  background: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.app-select-trigger-open {
+  outline: 2px solid rgba(27, 123, 83, 0.28);
+  outline-offset: 1px;
+  border-color: var(--green-600);
+}
+
+.app-select-chevron {
+  color: var(--green-700);
+  font-size: 0.75rem;
+}
+
+.app-select-options {
+  list-style: none;
+  margin: 0;
+  padding: 0.4rem;
+  position: absolute;
+  top: calc(100% + 0.3rem);
+  left: 0;
+  right: 0;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: 0 10px 24px rgba(16, 35, 24, 0.15);
+  z-index: 30;
+}
+
+.app-select-option {
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  border: 0;
+  border-radius: 8px;
+  padding: 0.5rem 0.6rem;
+  color: var(--text-900);
+}
+
+.app-select-option:hover {
+  background: var(--green-100);
+}
+
+.app-select-option-selected {
+  background: var(--green-600);
+  color: var(--white);
+}
+
+.app-select-option-selected:hover {
+  color: var(--text-900);
+}
+
+.app-select-helper {
+  color: var(--text-700);
+  font-size: 0.8rem;
+}
+
+.app-select-error {
+  color: #b42318;
+  font-size: 0.8rem;
+}

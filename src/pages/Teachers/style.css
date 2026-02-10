@@ -1,0 +1,204 @@
+.teachers-page {
+  display: grid;
+  gap: 1rem;
+}
+
+.teachers-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1.25rem;
+  box-shadow: 0 10px 30px rgba(18, 96, 63, 0.08);
+}
+
+.teachers-card h2 {
+  margin: 0 0 0.5rem;
+}
+
+.teachers-card p {
+  margin: 0;
+  color: var(--text-700);
+}
+
+.teachers-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.85rem;
+  flex-wrap: wrap;
+}
+
+.teachers-filters {
+  margin-top: 1rem;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.teachers-filters-label {
+  font-size: 0.9rem;
+  color: var(--text-700);
+  font-weight: 600;
+}
+
+.teachers-search-combined {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--white);
+  display: grid;
+  grid-template-columns: 1fr 180px;
+  align-items: center;
+}
+
+.teachers-search-input-container,
+.teachers-search-select-container {
+  gap: 0;
+}
+
+.teachers-search-input {
+  border: 0;
+  border-radius: 12px 0 0 12px;
+  box-shadow: none;
+}
+
+.teachers-search-input:focus {
+  outline: none;
+}
+
+.teachers-search-select-container {
+  border-left: 1px solid var(--border);
+}
+
+.teachers-search-select-container .app-select-trigger {
+  border: 0;
+  border-radius: 0 12px 12px 0;
+  box-shadow: none;
+}
+
+.teachers-search-select-container .app-select-trigger-open {
+  outline: none;
+}
+
+.teachers-error-message {
+  margin-top: 0.75rem;
+  color: #b42318;
+  font-weight: 600;
+}
+
+.teachers-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.85rem;
+}
+
+.teachers-status-card {
+  background: var(--green-100);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1rem;
+  color: var(--green-700);
+}
+
+.teachers-status-card strong {
+  display: block;
+}
+
+.teachers-status-card span {
+  display: block;
+  margin-top: 0.35rem;
+  color: var(--text-700);
+  font-size: 0.9rem;
+}
+
+.teachers-status-card--clickable {
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.teachers-status-card--clickable:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(18, 96, 63, 0.15);
+}
+
+.teachers-create-form {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.teachers-status-card p {
+  margin: 0.35rem 0 0 0;
+  color: var(--text-700);
+  font-size: 0.9rem;
+}
+
+.teachers-view-card {
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: linear-gradient(180deg, #f9fffc 0%, #f2fbf7 100%);
+  padding: 1rem;
+}
+
+.teachers-view-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.teachers-view-item {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.75rem;
+  background: var(--white);
+  display: grid;
+  gap: 0.35rem;
+}
+
+.teachers-view-item span {
+  color: var(--text-700);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.teachers-view-item strong {
+  color: var(--text-900);
+  font-size: 1rem;
+  word-break: break-word;
+}
+
+.delete-confirmation {
+  padding: 1rem 0;
+}
+
+.delete-confirmation p {
+  margin: 0;
+  color: var(--text-900);
+  line-height: 1.5;
+}
+
+@media (max-width: 700px) {
+  .teachers-search-combined {
+    grid-template-columns: 1fr;
+  }
+
+  .teachers-search-input {
+    border-radius: 12px 12px 0 0;
+  }
+
+  .teachers-search-select-container {
+    border-left: 0;
+    border-top: 1px solid var(--border);
+  }
+
+  .teachers-search-select-container .app-select-trigger {
+    border-radius: 0 0 12px 12px;
+  }
+
+  .teachers-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .teachers-view-grid {
+    grid-template-columns: 1fr;
+  }
+}

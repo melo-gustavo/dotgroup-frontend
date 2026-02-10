@@ -1,0 +1,29 @@
+.course-form {
+  display: grid;
+  gap: 1rem;
+}
+
+.form-group {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.course-form label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--text-700);
+  margin-bottom: 0.35rem;
+  display: block;
+}
+
+.course-form input,
+.course-form select {
+  width: 100%;
+}
+
+.form-error {
+  font-size: 0.8rem;
+  color: #b42318;
+  font-weight: 500;
+  display: block;
+}
