@@ -31,7 +31,6 @@ VITE_BASE_URL_BACKEND="http://localhost:3000"
 
 - `npm run dev`: inicia ambiente de desenvolvimento
 - `npm run build`: build de produção
-- `npm run preview`: preview do build
 - `npm run lint`: validação de lint
 
 ## Execução
