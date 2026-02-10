@@ -37,16 +37,14 @@ function normalizeCourseType(type: unknown): CourseTypeValue {
     return mappedLegacyType;
   }
 
-  // Check for exact matches in CourseType enum
   const validTypes = Object.values(CourseType);
   if (validTypes.includes(normalized as CourseTypeValue)) {
     return normalized as CourseTypeValue;
   }
 
-  // If we have a normalized string that doesn't match, log it for debugging
   if (normalized) {
     console.warn(
-      `Unknown course type received: "${normalized}". Defaulting to TECHNOLOGY.`,
+      `Tipo de curso recebido: "${normalized}". Usando TECNOLOGIA como padrão.`,
     );
   }
 
@@ -57,11 +55,6 @@ function normalizeCourse(raw: ApiCourse, index: number): Course {
   const courseType = normalizeCourseType(
     raw.type ?? raw.courseType ?? raw.course?.type,
   );
-
-  // Debug log to see what types are coming from the backend
-  if (!raw.type && !raw.courseType) {
-    console.log(`Course "${raw.title}" has no type field. Raw data:`, raw);
-  }
 
   return {
     id: raw.id ?? `course-${index + 1}`,

@@ -47,7 +47,6 @@ export function ClassEnrollmentForm({
 
     const userId = Number(selectedUserId);
 
-    // Validar data de matrícula
     const today = new Date();
     const classStartDate = new Date(startDate);
     const classEndDate = new Date(endDate);
@@ -60,13 +59,11 @@ export function ClassEnrollmentForm({
       errors.push("A matrícula não está disponível - turma encerrada");
     }
 
-    // Validar matrícula duplicada na mesma turma
     const isDuplicateInClass = await checkDuplicateEnrollment(userId, classId);
     if (isDuplicateInClass) {
       errors.push("Este aluno já está matriculado nesta turma");
     }
 
-    // Validar matrícula duplicada no mesmo curso
     const isDuplicateInCourse = await checkCourseEnrollment(userId, courseId);
     if (isDuplicateInCourse) {
       errors.push("Este aluno já está matriculado em outra turma deste curso");

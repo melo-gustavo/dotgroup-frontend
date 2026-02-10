@@ -23,7 +23,6 @@ export function useDashboardPage() {
     try {
       setLoadingMetrics(true);
 
-      // Fetch all data in parallel
       const [usersData, coursesData, classesData] = await Promise.all([
         getRequest<unknown[]>("/users").catch(() => []),
         getRequest<unknown[]>("/courses").catch(() => []),
@@ -34,7 +33,6 @@ export function useDashboardPage() {
       const totalCourses = coursesData?.length ?? 0;
       const totalClasses = classesData?.length ?? 0;
 
-      // Calculate classes by status
       const today = new Date();
       today.setHours(0, 0, 0, 0);
 

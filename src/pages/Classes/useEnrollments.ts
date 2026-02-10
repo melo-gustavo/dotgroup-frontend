@@ -123,13 +123,11 @@ export function useEnrollments() {
 
       const enrollmentsData = extractArray(enrollmentsResponse);
 
-      // Buscar dados dos alunos para cada matrícula
       const enrollmentsWithStudentData = await Promise.all(
         enrollmentsData.map(async (item) => {
           const enrollment = item as ApiEnrollment;
           const userId = enrollment.userId ?? enrollment.user_id;
 
-          // Se não temos dados do student na matrícula, buscar do endpoint de usuários
           if (!enrollment.student && userId) {
             try {
               const studentResponse = await getRequest<unknown>(
@@ -145,7 +143,6 @@ export function useEnrollments() {
                 classId,
               };
             } catch {
-              // Se falhar, retorna com dados vazios
               return {
                 ...enrollment,
                 classId,
@@ -214,13 +211,11 @@ export function useEnrollments() {
 
         const enrollmentsData = extractArray(enrollmentsResponse);
 
-        // Buscar dados da turma para cada matrícula
         const enrollmentsWithClassData = await Promise.all(
           enrollmentsData.map(async (item) => {
             const enrollment = item as ApiEnrollment;
             const classId = enrollment.classId ?? enrollment.class_id;
 
-            // Se não temos dados da classe, buscar do endpoint de classes
             if (!enrollment.class && classId) {
               try {
                 const classResponse = await getRequest<unknown>(
@@ -239,7 +234,6 @@ export function useEnrollments() {
                   },
                 };
               } catch {
-                // Se falhar, retorna com dados vazios
                 return enrollment;
               }
             }
